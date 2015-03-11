@@ -1,6 +1,7 @@
 package bitsykolayers.layersthemewrapper2;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -16,6 +17,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import android.view.MenuItem;
 
 /**
  * Created by lovejoy777 & bgill55 on 3/7/15.
@@ -26,6 +28,8 @@ public class Wrapper_Activity extends Activity {
 
     Button button;
 
+
+
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -33,6 +37,8 @@ public class Wrapper_Activity extends Activity {
 
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
+
+
 
             @Override
             public void onClick(View v) {
@@ -47,14 +53,46 @@ public class Wrapper_Activity extends Activity {
 
                 runtask1();
             }
+
+
         });
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        super.onOptionsItemSelected(item);
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the menu/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        switch (item.getItemId()) {
+
+            case R.id.action_donations:
+                launchdonations();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void launchdonations() {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SV8LMGMPFEUTY")));
     }
 
     public void runtask1() {
 
         // IF LAYERS MANAGER IS INSTALLED LAUNCH IT
-        boolean installed  =   appInstalledOrNot("com.lovejoy777.rroandlayersmanager");
-        if(installed) {
+        boolean installed = appInstalledOrNot("com.lovejoy777.rroandlayersmanager");
+        if (installed) {
 
             // "THEME NAME" CHANGE "sysnergytest55" TO YOUR THEME NAME, MUST BE ALL LOWER CASE WITH THE .ZIP EXTENSION REMOVED.
             String themename = getString(R.string.themename);
@@ -117,9 +155,7 @@ public class Wrapper_Activity extends Activity {
             try {
 
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-            }
-
-            catch (android.content.ActivityNotFoundException anfe) {
+            } catch (android.content.ActivityNotFoundException anfe) {
 
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName)));
             }
@@ -132,10 +168,10 @@ public class Wrapper_Activity extends Activity {
         try {
             pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
             app_installed = true;
-        }
-        catch (PackageManager.NameNotFoundException e) {
+        } catch (PackageManager.NameNotFoundException e) {
             app_installed = false;
         }
-        return app_installed ;
+        return app_installed;
     }
+
 }

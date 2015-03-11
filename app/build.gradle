@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "bitsykolayers.layersthemewrapper2"
+        applicationId "bitsykolayers.Synergy"
         minSdkVersion 21
         targetSdkVersion 21
         versionCode 1
