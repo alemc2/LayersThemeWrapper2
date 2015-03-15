@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="1.0" versioncode="1">
+        <change>First version of Contours Purple overlays</change>
+        <change>
+            Added overlays for:
+            &lt;ol&gt;
+                &lt;li&gt;Calculator&lt;/li&gt;
+                &lt;li&gt;Cell Broadcast Receiver - For some sub-setting menus&lt;/li&gt;
+                &lt;li&gt;Contacts&lt;/li&gt;
+                &lt;li&gt;Cyanogenmod settings - Only for devices that have a cyanogenmod settings sub-setting in their setting like the gestures setting menu in oneplus one.&lt;/li&gt;
+                &lt;li&gt;Dialer - The phone dialer app&lt;/li&gt;
+                &lt;li&gt;Framework&lt;/li&gt;
+                &lt;li&gt;Phone - Some sub-settings in the dialer and the system settings. Also themes the emergency dialer - hey your device has gotta look awesome even when in an emergency ;)&lt;/li&gt;
+                &lt;li&gt;Play Music - Black theme with the default orange changed to a more darker shade.&lt;/li&gt;
+                &lt;li&gt;Play Store -  Black theme with the default green changed to a more bluish shade.&lt;/li&gt;
+                &lt;li&gt;Settings&lt;/li&gt;
+                &lt;li&gt;SystemUI&lt;/li&gt;
+            &lt;/ol&gt;
+        </change>
+    </release>
+    <release version="2.0" versioncode="2">
+        <change>
+            Newly added overlays:
+            &lt;ol&gt;
+                &lt;li&gt;Gmail, Inbox - To theme notifications for proper contrast.&lt;/li&gt;
+                &lt;li&gt;Google Now&lt;/li&gt;
+                &lt;li&gt;Slim Center&lt;/li&gt;
+                &lt;li&gt;Telecom - For the quick response settings&lt;/li&gt;
+            &lt;/ol&gt;
+        </change>
+        <change>Contact overlay corrected for black hint text on adding/editing contacts.</change>
+        <change>Framework overlay changed to theme a few icons better.</change>
+        <change>Play Music overlay changed to correct a couple of black on black text issues.</change>
+        <change>Playstore overlay changed to handle latest play store style changes. The search bar(replaced action bar) will now be Black only.</change>
+        <change>Settings overlay changed to add a few more icons.</change>
+        <change>SystemUI overlay changed to theme more QS tiles and a couple of minor fixes.</change>
+    </release>
+</changelog>

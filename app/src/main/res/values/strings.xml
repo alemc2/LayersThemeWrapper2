@@ -1,8 +1,20 @@
 <resources>
-    <string name="app_name">Layers Theme Wrapper</string>
+    <string name="app_name">Contours Purple Installer</string>
 
 
     <!-- CHANGE THIS STRING TO THE SAME AS YOUR THEMENAME THAT YOU PLACED IN THE RAW FOLDER -->
-    <string name="themename">synergytest55</string>
+    <string name="themename">contours_purple</string>
+    
+    <string name="button_text">Install</string>
+
+    <string name="changelog_css">
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        h1 {
+            color: #9c28e3;
+        }
+    </string>
 
 </resources>

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light">
+    <style name="AppTheme" parent="android:Theme.Material">
+        <item name="android:windowBackground">@color/dark_theme_bg</item>
+        <item name="android:colorPrimary">@color/dark_primary</item>
+        <item name="android:colorPrimaryDark">@color/dark_primary_dark</item>
+        <item name="android:colorAccent">@color/dark_accent</item>
+        <item name="android:navigationBarColor">@color/dark_nav_bar</item>
+        <item name="android:colorButtonNormal">@color/dark_accent</item>
     </style>
 </resources>

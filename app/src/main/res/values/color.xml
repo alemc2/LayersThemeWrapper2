@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_primary">#ff6a1b9a</color>
+    <color name="dark_accent">#ff9c28e3</color>
+    <color name="dark_nav_bar">#ff000000</color>
+    <color name="dark_primary_dark">#ff4a148c</color>
+    <color name="dark_theme_bg">#ff000000</color>
+</resources>
